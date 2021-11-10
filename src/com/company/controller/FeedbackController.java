@@ -23,9 +23,9 @@ public class FeedbackController {
         return customerFeedbacks;
     }
 
-    public Feedback create(Feedback customer) {
-        if (customer != null && !this.isValidFeedbackId(customer.getIdCustomer())) {
-            return feedbackDAO.create(customer);
+    public Feedback create(Feedback feedback) {
+        if (feedback != null && !this.isValidFeedbackId(feedback.getIdFeedback())) {
+            return feedbackDAO.create(feedback);
         }
         return null;
     }

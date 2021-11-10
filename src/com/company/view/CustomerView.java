@@ -26,7 +26,7 @@ public class CustomerView {
 
     public void showCustomer(Customer customer) {
         if (customer != null) {
-            System.out.printf("Id: %d - Cliente: %s\n",
+            System.out.printf(" - Id: %d - Cliente: %s",
                     customer.getIdCustomer(),
                     customer.getName()
             );
