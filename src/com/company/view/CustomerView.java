@@ -33,6 +33,7 @@ public class CustomerView {
         } else {
             System.out.println("Cliente não encontrado");
         }
+        System.out.println();
     }
 
     public boolean listCustomers() {
@@ -64,16 +65,21 @@ public class CustomerView {
     public void selectCustomer() {
         Long selectedId = this.entryCustomerId();
         if (selectedId != null) {
-            System.out.println("1 - Listar Mensagens");
-            System.out.println("2 - Cadastrar Mensagem");
+            int menuOption;
+            do {
+                System.out.println("1 - Listar Mensagens");
+                System.out.println("2 - Cadastrar Mensagem");
+                System.out.println("3 - Voltar ao menu");
 
-            switch (input.nextInt()) {
-                case 1 -> feedbackView.listCustomerFeedbacks(selectedId);
-                case 2 -> feedbackView.createCustomerFeedback(selectedId);
-            }
+                switch (menuOption = input.nextInt()) {
+                    case 1 -> feedbackView.listCustomerFeedbacks(selectedId);
+                    case 2 -> feedbackView.createCustomerFeedback(selectedId);
+                }
+            } while (menuOption != 3);
         } else {
-            System.out.println("O id informado não e valido");
+            System.out.print("Não foi possível selecionar um cliente\n\n");
         }
+        System.out.println();
     }
 
     public void createCustomer() {
@@ -90,6 +96,7 @@ public class CustomerView {
         } else {
             System.out.println("Não foi possivel realizar cadastrar o cliente");
         }
+        System.out.println();
     }
 
 }

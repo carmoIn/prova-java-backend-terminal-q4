@@ -27,7 +27,7 @@ public class FeedbackView {
     }
 
     public boolean listCustomerFeedbacks(Long customerId) {
-        System.out.println("Lista de Clientes");
+        System.out.println("Lista de Feedbacks");
         List<Feedback> feedbacks = feedbackController.listByCustomerId(customerId);
 
         if (!feedbacks.isEmpty()) {
@@ -38,6 +38,7 @@ public class FeedbackView {
             System.out.println("Nenhum feedback cadastrado");
             return false;
         }
+        System.out.println();
         return true;
     }
 }

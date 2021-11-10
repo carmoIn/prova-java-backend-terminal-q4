@@ -1,8 +1,6 @@
 package com.company.controller;
 
-import com.company.DAO.CustomerDAO;
 import com.company.DAO.FeedbackDAO;
-import com.company.model.Customer;
 import com.company.model.Feedback;
 
 import java.util.ArrayList;
